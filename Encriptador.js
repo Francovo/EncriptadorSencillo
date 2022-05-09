@@ -1,6 +1,7 @@
 let Data;
 let Result;
 
+//Tomar data del input
 const GetDataSubmit = () => {
   Data = document.querySelector("#input1").value;
 
@@ -30,10 +31,14 @@ const GetDataSubmit = () => {
     `;
   } else {
     document.getElementById("CardBack").innerHTML = `
-    <h1>${x}</h1>
+    <h1 type='text' id='finaltext'>${x}</h1>
+    <button class="BtnDesEncriptar" type="submit" onclick={Copiar()}
+    >Copiar</button>
     `;
   }
 };
+
+//Desencriptar cuando data es real
 
 const DesEncriptar = () => {
   Dato = Result;
@@ -45,8 +50,18 @@ const DesEncriptar = () => {
     .replace(/ufat/gi, "u");
   console.log(Resultado);
 
-
   document.getElementById("CardBack").innerHTML = `
   <h1>${Resultado}</h1>
   `;
+};
+
+//Copiar
+const Copiar = () => {
+  let copy = document.getElementById("finaltext");
+  copy.select();
+  select.setSelectionRange(0, 9999);
+  navigator.clipboard.writeText(copy.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copy.value);
 };
