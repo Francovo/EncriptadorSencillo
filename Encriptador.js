@@ -32,7 +32,7 @@ const GetDataSubmit = () => {
   } else {
     document.getElementById("CardBack").innerHTML = `
     <h1 type='text' id='finaltext'>${x}</h1>
-    <button class="BtnDesEncriptar" type="submit" onclick={Copiar()}
+    <button class="BtnDesEncriptar" type="submit" onclick="Copiar()"
     >Copiar</button>
     `;
   }
@@ -58,10 +58,6 @@ const DesEncriptar = () => {
 //Copiar
 const Copiar = () => {
   let copy = document.getElementById("finaltext");
-  copy.select();
-  select.setSelectionRange(0, 9999);
-  navigator.clipboard.writeText(copy.value);
+  navigator.clipboard.writeText(copy.innerHTML);
 
-  /* Alert the copied text */
-  alert("Copied the text: " + copy.value);
 };
