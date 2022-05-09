@@ -1,0 +1,69 @@
+.Container{
+    padding: 1rem 2rem;
+    display: flex;
+}
+
+.ContainerInput{
+    padding: 4rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+.Input{
+    padding: 1rem;
+    font-size: 22px;
+    width: 96.6%;
+    color: #0A3871;
+    word-break: break-all;
+    height: 90vh;
+    resize: none;
+    border: none;
+}::placeholder{
+    color: #0A3871;
+    font-size: 22px;
+}
+
+.InputButtons{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 10%;
+    align-items: flex-end;
+}
+
+.BtnEncriptar{
+    cursor: pointer;
+    width: 30%;
+    height: 3.5rem;
+    background-color: #0A3871;
+    color: white;
+    border-radius: 20px;
+}
+
+.BtnDesEncriptar{
+    cursor: pointer;
+    width: 30%;
+    height: 3.5rem;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-radius: 20px;
+}
+
+.ContainerImage{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 10px 17px 23px -5px rgba(0,0,0,0.45);
+    background-color: white;
+}
+
+.Image{
+    padding: 2rem;
+    width: 250px;
+
+}

@@ -4,15 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/Style.module.css"
+      media="screen"
+    />
+    <title>Encriptador</title>
   </head>
-  <body>
-    <h1>Bienvenido a mi encriptador</h1>
-    <form onsubmit="">
-      <input id="input1" placeholder="Ingrese los datos"/>
-      <button type="submit" onclick={GetDataSubmit()}>Encriptar</button>
-    </form>
-  </body>
+  <body style="background-color: #e5e5e5">
+    <div class="Container">
+      <div>
+        <img src="./images/Vector.svg" alt="" />
+      </div>
+      <div class="ContainerInput">
+        <div class="form">
+          <textarea
+            name=""
+            id="input1"
+            placeholder="Ingrese el texto aqui"
+            class="Input"
+            style="background-color: transparent"
+          ></textarea>
+        </div>
+        <div style="font-size: small; margin-left: 3rem">
+          Solo letras minusculas y sin acentos
+        </div>
+        <div class="InputButtons">
+          <button
+            class="BtnEncriptar"
+            type="submit"
+            onclick="{GetDataSubmit()}"
+          >
+            Encriptar
+          </button>
+          <button
+            class="BtnDesEncriptar"
+            type="submit"
+            onclick="{DesEncriptar()}"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </div>
 
+      <card class="ContainerImage" id="CardBack">
+        <img class="Image" src="./images/Muñeco.svg" />
+        <h3 style="word-break: break-all">Ningun mensaje fue encontrado</h3>
+        <h6>Ingresa el texto que deseas encriptar o desencriptar</h6>
+      </card>
+    </div>
+  </body>
+<footer style="display: flex; justify-content: space-evenly;">
+  <h6>Developed by Franco Velasco</h6>
+  <h6>Email francovelaso10@hotmail.com</h6>
+</footer>
   <script src="./Encriptador.js"></script>
 </html>
